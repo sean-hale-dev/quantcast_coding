@@ -4,9 +4,10 @@ use std::collections::HashMap;
 use std::fs::read_to_string;
 
 #[derive(Parser, Debug)]
-/// A tool for analyzing cookie logs for usage frequency
+/// A tool for analyzing cookie logs for usage frequency, takes in a source CSV log file and a
+/// specific date and returns the cookie IDs which appear most often in the given log
 struct CliArgs {
-    /// The log file to analyze
+    /// The CSV log file to analyze
     log_file: String,
 
     #[clap(short)]
